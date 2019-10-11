@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82F9831C-F7D4-43F4-98CE-BAEE1CBC1704}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DatesUI</RootNamespace>
+    <AssemblyName>DatesUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\WindowsFormsApp25\WindowsFormsApp25\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChemistForms\ChemistLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChemistForms\ChemistLoginForm.Designer.cs">
+      <DependentUpon>ChemistLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChemistForms\ChemistMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChemistForms\ChemistMainForm.Designer.cs">
+      <DependentUpon>ChemistMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChemistForms\ChemistRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChemistForms\ChemistRegisterForm.Designer.cs">
+      <DependentUpon>ChemistRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChemistForms\ForgetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChemistForms\ForgetPasswordForm.Designer.cs">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorForms\DoctorLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForms\DoctorLoginForm.Designer.cs">
+      <DependentUpon>DoctorLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorForms\DoctorRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForms\DoctorRegisterForm.Designer.cs">
+      <DependentUpon>DoctorRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorForms\DrMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForms\DrMainForm.Designer.cs">
+      <DependentUpon>DrMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainEntry.Designer.cs">
+      <DependentUpon>MainEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\ForgetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\ForgetPasswordForm.Designer.cs">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\PatientLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\PatientLoginForm.Designer.cs">
+      <DependentUpon>PatientLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\PatientMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\PatientMainForm.Designer.cs">
+      <DependentUpon>PatientMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\DateCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\DateCheck.Designer.cs">
+      <DependentUpon>DateCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\PatientRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\PatientRegisterForm.Designer.cs">
+      <DependentUpon>PatientRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\PatientTakesDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\PatientTakesDate.Designer.cs">
+      <DependentUpon>PatientTakesDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\TakeDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\TakeDateForm.Designer.cs">
+      <DependentUpon>TakeDateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChemistForms\ChemistLoginForm.resx">
+      <DependentUpon>ChemistLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChemistForms\ChemistMainForm.resx">
+      <DependentUpon>ChemistMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChemistForms\ChemistRegisterForm.resx">
+      <DependentUpon>ChemistRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChemistForms\ForgetPasswordForm.resx">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorForms\DoctorLoginForm.resx">
+      <DependentUpon>DoctorLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorForms\DoctorRegisterForm.resx">
+      <DependentUpon>DoctorRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorForms\DrMainForm.resx">
+      <DependentUpon>DrMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainEntry.resx">
+      <DependentUpon>MainEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\DateCheck.resx">
+      <DependentUpon>DateCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\ForgetPasswordForm.resx">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\PatientLoginForm.resx">
+      <DependentUpon>PatientLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\PatientMainForm.resx">
+      <DependentUpon>PatientMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\PatientRegisterForm.resx">
+      <DependentUpon>PatientRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\PatientTakesDate.resx">
+      <DependentUpon>PatientTakesDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\TakeDateForm.resx">
+      <DependentUpon>TakeDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DatesBLL\DatesBLL.csproj">
+      <Project>{1EEAEAE3-B9D2-4DA7-8986-C66D609D0458}</Project>
+      <Name>DatesBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatesDAL\DatesDAL.csproj">
+      <Project>{19D52269-F6D0-4348-9E2B-FE1637E4687E}</Project>
+      <Name>DatesDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatesDTOES\DatesDTOES.csproj">
+      <Project>{F2AC34B8-86C4-4576-BCB5-E8D1E0600382}</Project>
+      <Name>DatesDTOES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatesEntities\DatesEntities.csproj">
+      <Project>{89133864-4299-46D4-8579-EE9C2EB6B474}</Project>
+      <Name>DatesEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\download.jpg" />
+    <Content Include="Images\fidan.PNG" />
+    <Content Include="Images\genel-bagis-bagis-ana-sayfa.jpg" />
+    <Content Include="Images\onlineBagisBanner1.jpeg" />
+    <Content Include="Images\online_bagis-2015.jpg" />
+    <Content Include="Images\tema.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
