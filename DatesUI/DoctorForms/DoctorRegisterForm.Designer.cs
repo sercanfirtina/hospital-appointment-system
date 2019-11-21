@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorRegisterForm));
-            this.txtPolyClinicId = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtEMail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtSurname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -37,27 +36,10 @@
             this.txtIdNumber = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnRegister = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbxPolyClinics = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtPolyClinicId
-            // 
-            this.txtPolyClinicId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPolyClinicId.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtPolyClinicId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPolyClinicId.HintForeColor = System.Drawing.Color.Empty;
-            this.txtPolyClinicId.HintText = "POLYCLINIC";
-            this.txtPolyClinicId.isPassword = false;
-            this.txtPolyClinicId.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtPolyClinicId.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtPolyClinicId.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtPolyClinicId.LineThickness = 3;
-            this.txtPolyClinicId.Location = new System.Drawing.Point(339, 430);
-            this.txtPolyClinicId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPolyClinicId.Name = "txtPolyClinicId";
-            this.txtPolyClinicId.Size = new System.Drawing.Size(313, 44);
-            this.txtPolyClinicId.TabIndex = 41;
-            this.txtPolyClinicId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtPassword
             // 
@@ -71,8 +53,8 @@
             this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.txtPassword.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtPassword.LineThickness = 3;
-            this.txtPassword.Location = new System.Drawing.Point(339, 357);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(362, 361);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(313, 44);
             this.txtPassword.TabIndex = 40;
@@ -90,8 +72,8 @@
             this.txtEMail.LineIdleColor = System.Drawing.Color.Gray;
             this.txtEMail.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtEMail.LineThickness = 3;
-            this.txtEMail.Location = new System.Drawing.Point(339, 284);
-            this.txtEMail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEMail.Location = new System.Drawing.Point(362, 288);
+            this.txtEMail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtEMail.Name = "txtEMail";
             this.txtEMail.Size = new System.Drawing.Size(313, 44);
             this.txtEMail.TabIndex = 39;
@@ -109,8 +91,8 @@
             this.txtSurname.LineIdleColor = System.Drawing.Color.Gray;
             this.txtSurname.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtSurname.LineThickness = 3;
-            this.txtSurname.Location = new System.Drawing.Point(339, 211);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSurname.Location = new System.Drawing.Point(362, 214);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(313, 44);
             this.txtSurname.TabIndex = 38;
@@ -128,8 +110,8 @@
             this.txtName.LineIdleColor = System.Drawing.Color.Gray;
             this.txtName.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtName.LineThickness = 3;
-            this.txtName.Location = new System.Drawing.Point(339, 138);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(362, 142);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(313, 44);
             this.txtName.TabIndex = 37;
@@ -147,8 +129,8 @@
             this.txtIdNumber.LineIdleColor = System.Drawing.Color.Gray;
             this.txtIdNumber.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtIdNumber.LineThickness = 3;
-            this.txtIdNumber.Location = new System.Drawing.Point(339, 65);
-            this.txtIdNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdNumber.Location = new System.Drawing.Point(362, 69);
+            this.txtIdNumber.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtIdNumber.Name = "txtIdNumber";
             this.txtIdNumber.Size = new System.Drawing.Size(313, 44);
             this.txtIdNumber.TabIndex = 36;
@@ -158,9 +140,9 @@
             // 
             this.btnRegister.ActiveBorderThickness = 1;
             this.btnRegister.ActiveCornerRadius = 20;
-            this.btnRegister.ActiveFillColor = System.Drawing.Color.Gray;
+            this.btnRegister.ActiveFillColor = System.Drawing.Color.Teal;
             this.btnRegister.ActiveForecolor = System.Drawing.Color.White;
-            this.btnRegister.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRegister.ActiveLineColor = System.Drawing.Color.Teal;
             this.btnRegister.BackColor = System.Drawing.SystemColors.Control;
             this.btnRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.BackgroundImage")));
             this.btnRegister.ButtonText = "REGISTER";
@@ -172,39 +154,65 @@
             this.btnRegister.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnRegister.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRegister.IdleLineColor = System.Drawing.Color.Gray;
-            this.btnRegister.Location = new System.Drawing.Point(400, 503);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRegister.Location = new System.Drawing.Point(423, 507);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(181, 41);
             this.btnRegister.TabIndex = 42;
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(273, 594);
+            this.pictureBox1.Size = new System.Drawing.Size(331, 594);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // cmbxPolyClinics
+            // 
+            this.cmbxPolyClinics.FormattingEnabled = true;
+            this.cmbxPolyClinics.Location = new System.Drawing.Point(362, 459);
+            this.cmbxPolyClinics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbxPolyClinics.Name = "cmbxPolyClinics";
+            this.cmbxPolyClinics.Size = new System.Drawing.Size(312, 24);
+            this.cmbxPolyClinics.TabIndex = 43;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(359, 428);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 17);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "PolyClinic : ";
             // 
             // DoctorRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 594);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbxPolyClinics);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.txtPolyClinicId);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEMail);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtIdNumber);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DoctorRegisterForm";
             this.Text = "DoctorRegisterForm";
+            this.Load += new System.EventHandler(this.DoctorRegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -212,11 +220,12 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnRegister;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPolyClinicId;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEMail;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSurname;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtIdNumber;
+		private System.Windows.Forms.ComboBox cmbxPolyClinics;
+        private System.Windows.Forms.Label label1;
     }
 }

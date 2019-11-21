@@ -24,7 +24,7 @@ namespace DatesUI.ChemistForms
         IChemistController _IChemistController;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = txtMail.Text.Trim().ToString();
+            string email = txtEMail.Text.Trim().ToString();
             string password = txtPassword.Text.Trim().ToString();
 
             try

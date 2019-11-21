@@ -53,8 +53,8 @@ namespace DatesUI.PatientForms
 
 		private void BtnShowAllDates_Click(object sender, EventArgs e)
 		{
-            grpBoxDateLists.BringToFront();
-            panelAdvertisment.Visible = false;
+			grpBoxDateLists.BringToFront();
+			panelAdvertisment.Visible = false;
 			grpBoxMYInfo.Visible = false;
 			grpBxAllPrescription.Visible = false;
 			grpBoxDateLists.Visible = true;
@@ -71,10 +71,10 @@ namespace DatesUI.PatientForms
 				}
 				else
 				{
-					foreach(ShowPatientDate item in listOfdatesByPatientID)
+					foreach (ShowPatientDate item in listOfdatesByPatientID)
 					{
 						ListViewItem lstItem = new ListViewItem();
-						lstItem.Text =item.IdentificationNumber;
+						lstItem.Text = item.IdentificationNumber;
 						lstItem.Tag = item.DateID;
 						lstItem.SubItems.Add(item.DatesDate.ToLongDateString());
 						lstItem.SubItems.Add(item.DoctorName);
@@ -83,6 +83,7 @@ namespace DatesUI.PatientForms
 						lstItem.SubItems.Add(item.PolyClinicName);
 						lstItem.SubItems.Add(item.CityName);
 						lstItem.SubItems.Add(item.DistrictName);
+						lstItem.SubItems.Add(item.Hour);//Sınıf içinde set işlemi ile formatı değiştirdim
 
 						lstViewPatientDates.Items.Add(lstItem);
 					}
@@ -101,8 +102,8 @@ namespace DatesUI.PatientForms
 		#region Temizleme ve Doldurma metodları bu region içinde gereklidir.
 		private void BtnMyInfo_Click(object sender, EventArgs e)
 		{
-            grpBoxMYInfo.BringToFront();
-            panelAdvertisment.Visible = false;
+			grpBoxMYInfo.BringToFront();
+			panelAdvertisment.Visible = false;
 			grpBoxDateLists.Visible = false;
 			grpBxAllPrescription.Visible = false;
 			grpBoxMYInfo.Visible = true;
@@ -152,7 +153,7 @@ namespace DatesUI.PatientForms
 
 		private void BtnUpdate_Click(object sender, EventArgs e)
 		{
-            
+
 			try
 			{
 				if (_patient != null)
@@ -167,7 +168,7 @@ namespace DatesUI.PatientForms
 					string newMailAddres = GeneralMetods.SpaceControl(txtMail.Text);
 					string newPhoneNumber = GeneralMetods.SpaceControl(maskedTxtPhoneNumber.Text);
 
-					if (!string.IsNullOrEmpty(newMailAddres) && !string.IsNullOrEmpty(newUserPassword))
+					if (!string.IsNullOrEmpty(newMailAddres) && !string.IsNullOrEmpty(newUserPassword) && GeneralMetods.IsItMail(newMailAddres))
 					{
 						if (newUserPassword == newRePassword)//şifreler de aynıysa bu ekrana girer
 						{
@@ -183,7 +184,7 @@ namespace DatesUI.PatientForms
 							if (dresult == DialogResult.Yes)//Dresulttan yes gelirse update işlemini gerçekleştirir.
 							{
 								_IpatientController.UpdatePatient(updatePation);
-								MessageBox.Show("Your Informations were changed ...");
+								MessageBox.Show("Your Informations were changed . You should re-login ");
 							}
 							else//Messagebox no denirse iptal edildi güncelleme işlemi
 							{
@@ -208,13 +209,13 @@ namespace DatesUI.PatientForms
 			}
 			catch (Exception exc)
 			{
-
+				MessageBox.Show(exc.Message);
 			}
 		}
 
 		private void BtnAllPrescription_Click(object sender, EventArgs e)
 		{
-            grpBxAllPrescription.BringToFront();
+			grpBxAllPrescription.BringToFront();
 			lstViewPrescription.Items.Clear();
 			grpBxAllPrescription.Visible = true;
 			grpBoxDateLists.Visible = false;
@@ -236,8 +237,8 @@ namespace DatesUI.PatientForms
 						ListViewItem lstItem = new ListViewItem();
 						lstItem.Text = item.PrescriptionCode;
 						lstItem.Tag = item.DateID;
-						lstItem.SubItems.Add(item.PrescriptionDate.ToLongTimeString());
-						lstItem.SubItems.Add(item.PrescriptionDescription);
+                        lstItem.SubItems.Add(item.PrescriptionDate.ToString().Split(' ')[0].Trim());
+                        lstItem.SubItems.Add(item.PrescriptionDescription);
 
 						lstViewPrescription.Items.Add(lstItem);
 					}
@@ -249,11 +250,11 @@ namespace DatesUI.PatientForms
 			}
 		}
 
-        private void BtnTakeDate_Click(object sender, EventArgs e)
-        {
-            PatientTakesDate patientTakesDate = new PatientTakesDate(_patient, _IpatientController);
+		private void BtnTakeDate_Click(object sender, EventArgs e)
+		{
+			PatientTakesDate patientTakesDate = new PatientTakesDate(_patient, _IpatientController);
 
-            patientTakesDate.ShowDialog();
-        }
-    }
+			patientTakesDate.ShowDialog();
+		}
+	}
 }

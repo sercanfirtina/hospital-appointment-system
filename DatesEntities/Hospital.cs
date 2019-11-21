@@ -11,5 +11,10 @@ namespace DatesEntities
         public int ID { get; set; }
         public string HospitalName { get; set; }
         public int DistrictID { get; set; }
+
+        public override string ToString()
+        {
+            return this.HospitalName;
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DatesEntities
 {
@@ -32,6 +33,23 @@ namespace DatesEntities
                 return inputStr;
             }
         }
+
+		//mail adresinin geçerli bir adress olup olmadığını kontrol eder.
+		public static bool IsItMail(string mailAddress)
+		{
+			Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+			Match match = regex.Match(mailAddress);
+
+			if(match.Success)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
         public static bool SendMail(string returnedValueFromDB, string toMail)
         {
             try
@@ -58,7 +76,6 @@ namespace DatesEntities
             }
 
         }
-
-
+		
     }
 }

@@ -11,31 +11,30 @@ namespace DatesUI
         {
             InitializeComponent();
         }
-
-        private void BtnPatientLogin_Click(object sender, EventArgs e)
-        {
-            PatientLoginForm patientLoginForm = new PatientLoginForm();
-
-            patientLoginForm.ShowDialog();
-
-        }
-
+		
         private void MainEntry_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnChemistLogin_Click(object sender, EventArgs e)
-        {
-            ChemistLoginForm _chemistForm = new ChemistLoginForm();
+		private void btnPatientLogin_Click_1(object sender, EventArgs e)
+		{
+			PatientLoginForm patientLoginForm = new PatientLoginForm();
 
-            _chemistForm.ShowDialog();
-        }
+			patientLoginForm.ShowDialog();
+		}
 
-        private void BtnDoctorLogin_Click(object sender, EventArgs e)
-        {
-            DoctorLoginForm _doctorLoginForm = new DoctorLoginForm();
-            _doctorLoginForm.ShowDialog();
-        }
-    }
+		private void btnDoctorLogin_Click_1(object sender, EventArgs e)
+		{
+			DoctorLoginForm _doctorLoginForm = new DoctorLoginForm();
+			_doctorLoginForm.ShowDialog();
+		}
+
+		private void btnChemistLogin_Click_1(object sender, EventArgs e)
+		{
+			ChemistLoginForm _chemistForm = new ChemistLoginForm();
+
+			_chemistForm.ShowDialog();
+		}
+	}
 }

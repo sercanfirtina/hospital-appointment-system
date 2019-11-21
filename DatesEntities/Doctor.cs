@@ -16,5 +16,11 @@ namespace DatesEntities
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
         public int PolyClinicID { get; set; }
+
+
+        public override string ToString()
+        {
+            return this.DoctorName + this.DoctorSurname;
+        }
     }
 }

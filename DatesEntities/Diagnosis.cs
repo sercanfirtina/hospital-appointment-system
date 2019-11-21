@@ -11,5 +11,10 @@ namespace DatesEntities
         public int ID { get; set; }
         public string DiagnosisName { get; set; }
         public string DiagnosisDescription { get; set; }
-    }
+
+		public override string ToString()
+		{
+			return this.DiagnosisName;
+		}
+	}
 }

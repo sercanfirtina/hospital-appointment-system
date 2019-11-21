@@ -42,6 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChemistDTO\ChemistPatient.cs" />
+    <Compile Include="DoctorDTO\DoctorHour.cs" />
+    <Compile Include="DoctorDTO\ExaminationDoktor.cs" />
+    <Compile Include="PatientDTO\DateConfirmationDTO.cs" />
+    <Compile Include="PatientDTO\HourDTO.cs" />
+    <Compile Include="PatientDTO\InsertDateDTO.cs" />
     <Compile Include="PatientDTO\ShowPatientDate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

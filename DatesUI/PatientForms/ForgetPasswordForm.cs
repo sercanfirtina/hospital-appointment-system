@@ -26,29 +26,37 @@ namespace DatesUI.PatientForms
 			{
 				if (!string.IsNullOrEmpty(mail))
 				{
-					string returnedValueFromDB = _patientController.FindEmail(mail);
-
-					if (!string.IsNullOrEmpty(returnedValueFromDB))
+					if(GeneralMetods.IsItMail(mail))
 					{
-						//Mail gönderme metodum
-						bool IsSentMAil = GeneralMetods.SendMail(returnedValueFromDB, mail);//2.Parametre ile hedef mail belirtilir
+						string returnedValueFromDB = _patientController.FindEmail(mail);
 
-                        if(IsSentMAil == true)//Mail gonderildiyse
-                        {
-                            MessageBox.Show("Mail has been sent ...");
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Mail hasn't been sent");
-                        }
+						if (!string.IsNullOrEmpty(returnedValueFromDB))
+						{
+							//Mail gönderme metodum
+							bool IsSentMAil = GeneralMetods.SendMail(returnedValueFromDB, mail);//2.Parametre ile hedef mail belirtilir
 
+							if (IsSentMAil == true)//Mail gonderildiyse
+							{
+								MessageBox.Show("Mail has been sent ...");
+								this.Close();
+							}
+							else
+							{
+								MessageBox.Show("Mail hasn't been sent");
+							}
+
+						}
+						else
+						{
+							//Uyarı ile mail bulunmadığını söyle
+							throw new Exception("Records don't included this email .");
+						}
 					}
 					else
 					{
-						//Uyarı ile mail bulunmadığını söyle
-						throw new Exception("Records don't included this email .");
+						throw new Exception("E-Mail address isn't correct ... Repeat again ");
 					}
+					
 				}
 				else
 				{

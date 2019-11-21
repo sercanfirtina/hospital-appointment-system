@@ -93,11 +93,29 @@
     <Compile Include="DoctorForms\DrMainForm.Designer.cs">
       <DependentUpon>DrMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoctorForms\ExaminationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForms\ExaminationForm.Designer.cs">
+      <DependentUpon>ExaminationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainEntry.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainEntry.Designer.cs">
       <DependentUpon>MainEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\DateConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\DateConfirmForm.Designer.cs">
+      <DependentUpon>DateConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForms\DoctorsEmptyTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForms\DoctorsEmptyTime.Designer.cs">
+      <DependentUpon>DoctorsEmptyTime.cs</DependentUpon>
     </Compile>
     <Compile Include="PatientForms\ForgetPasswordForm.cs">
       <SubType>Form</SubType>
@@ -135,12 +153,6 @@
     <Compile Include="PatientForms\PatientTakesDate.Designer.cs">
       <DependentUpon>PatientTakesDate.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatientForms\TakeDateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PatientForms\TakeDateForm.Designer.cs">
-      <DependentUpon>TakeDateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ChemistForms\ChemistLoginForm.resx">
@@ -164,11 +176,20 @@
     <EmbeddedResource Include="DoctorForms\DrMainForm.resx">
       <DependentUpon>DrMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DoctorForms\ExaminationForm.resx">
+      <DependentUpon>ExaminationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainEntry.resx">
       <DependentUpon>MainEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientForms\DateCheck.resx">
       <DependentUpon>DateCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\DateConfirmForm.resx">
+      <DependentUpon>DateConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForms\DoctorsEmptyTime.resx">
+      <DependentUpon>DoctorsEmptyTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientForms\ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
@@ -184,9 +205,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientForms\PatientTakesDate.resx">
       <DependentUpon>PatientTakesDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PatientForms\TakeDateForm.resx">
-      <DependentUpon>TakeDateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

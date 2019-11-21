@@ -10,5 +10,10 @@ namespace DatesEntities
     {
         public int ID { get; set; }
         public string PolycilinicName { get; set; }
+
+        public override string ToString()
+        {
+            return this.PolycilinicName;
+        }
     }
 }

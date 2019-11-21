@@ -102,9 +102,9 @@
             // 
             this.btnRegister.ActiveBorderThickness = 1;
             this.btnRegister.ActiveCornerRadius = 20;
-            this.btnRegister.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnRegister.ActiveFillColor = System.Drawing.Color.Teal;
             this.btnRegister.ActiveForecolor = System.Drawing.Color.White;
-            this.btnRegister.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnRegister.ActiveLineColor = System.Drawing.Color.Teal;
             this.btnRegister.BackColor = System.Drawing.SystemColors.Control;
             this.btnRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.BackgroundImage")));
             this.btnRegister.ButtonText = "REGISTER";
@@ -128,9 +128,9 @@
             // 
             this.btnLogin.ActiveBorderThickness = 1;
             this.btnLogin.ActiveCornerRadius = 20;
-            this.btnLogin.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnLogin.ActiveFillColor = System.Drawing.Color.Teal;
             this.btnLogin.ActiveForecolor = System.Drawing.Color.White;
-            this.btnLogin.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnLogin.ActiveLineColor = System.Drawing.Color.Teal;
             this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
             this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
             this.btnLogin.ButtonText = "LOGIN";
@@ -153,9 +153,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(407, 569);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -173,6 +175,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "DoctorLoginForm";
             this.Text = "DoctorLoginForm";
+            this.Load += new System.EventHandler(this.DoctorLoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

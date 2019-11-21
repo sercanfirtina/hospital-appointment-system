@@ -21,24 +21,20 @@ namespace DatesUI.PatientForms
 		}
 		IPatientController _patientController;
 
-		private void btnClear_Click(object sender, EventArgs e)
-		{
-			ClearControls();
-		}
-
 		public void ClearControls()
 		{
-			txtIdentifyNumber.Clear();
-			txtName.Clear();
-			txtSurname.Clear();
-			txtPassword.Clear();
-			txtRePassword.Clear();
-			txtMail.Clear();
-			mskedPhoneNumber.Clear();
+			//txtIdentifyNumber.Clear();
+			//txtMail.Clear();
+			//txtName.Clear();
+			//txtPassword.Clear();
+			//txtRePassword.Clear();
+			//txtSurname.Clear();
+			mskPhoneNumber.Clear();
 			rdBtnMan.Checked = false;
 			rdBtnWoman.Checked = false;
 			dateTimeBirthDate.Value = DateTime.Now;
 		}
+
 
 		private void btnRegister_Click(object sender, EventArgs e)
 		{
@@ -46,31 +42,31 @@ namespace DatesUI.PatientForms
 			//Not kayıt edilirken tek tek kontrollere boş olup olmadığına dair bir kontrol yapılmadı.
 			try
 			{
-                string identifyNumber = GeneralMetods.SpaceControl(txtIdentifyNumber.Text);
-                string pass = GeneralMetods.SpaceControl(txtPassword.Text);
-                string mailAddress = GeneralMetods.SpaceControl(txtMail.Text);
-                string rePass = GeneralMetods.SpaceControl(txtRePassword.Text);
-                string name = GeneralMetods.SpaceControl(txtName.Text);;
-                string surname =  GeneralMetods.SpaceControl(txtSurname.Text);;  
+				string identifyNumber = GeneralMetods.SpaceControl(txtIdentifyNumber.Text);
+				string pass = GeneralMetods.SpaceControl(txtPassword.Text);
+				string mailAddress = GeneralMetods.SpaceControl(txtMail.Text);
+				string rePass = GeneralMetods.SpaceControl(txtRePassword.Text);
+				string name = GeneralMetods.SpaceControl(txtName.Text); ;
+				string surname = GeneralMetods.SpaceControl(txtSurname.Text); ;
 
-				if (!string.IsNullOrEmpty(identifyNumber) && !string.IsNullOrEmpty(pass) && !string.IsNullOrEmpty(mailAddress) && !string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname) && !string.IsNullOrEmpty(rePass))
+				if (!string.IsNullOrEmpty(identifyNumber) && !string.IsNullOrEmpty(pass) && !string.IsNullOrEmpty(mailAddress) && !string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname) && !string.IsNullOrEmpty(rePass) && GeneralMetods.IsItMail(mailAddress))
 				{
-					if(pass.Equals(rePass))
+					if (pass.Equals(rePass))
 					{
 						//Formdan gelen verilerle yeni bir kayıt eklenir ve bunu db ye gönderilir.
 						Patient newPatient = new Patient();
 						newPatient.IdentificationNumber = identifyNumber;
-                        newPatient.Name = name;
-                        newPatient.Surname = surname;
-                        newPatient.Mail = mailAddress;
+						newPatient.Name = name;
+						newPatient.Surname = surname;
+						newPatient.Mail = mailAddress;
 						newPatient.Password = pass;
 						newPatient.IsWomen = rdBtnWoman.Checked ? true : false;
-						newPatient.PhoneNumber=mskedPhoneNumber.Text.ToString();
+						newPatient.PhoneNumber = mskPhoneNumber.Text.ToString();
 						newPatient.Birthdate = dateTimeBirthDate.Value;
-						
+
 						//Veri tabanı içerisinden dönen değer eklenilip eklenmediği hakkında bilgi verir.Bu kısımda kontrol edilir.
-						bool result = _patientController.AddPatient(newPatient);	
-						if(result == false)
+						bool result = _patientController.AddPatient(newPatient);
+						if (result == false)
 						{
 							MessageBox.Show("Patient wasn't created.");
 						}
@@ -97,9 +93,11 @@ namespace DatesUI.PatientForms
 			{
 				MessageBox.Show(exc.Message);
 			}
-			
 		}
 
-
+		private void btnClear_Click(object sender, EventArgs e)
+		{
+			ClearControls();
+		}
 	}
 }

@@ -28,70 +28,87 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.btnSendMail = new System.Windows.Forms.Button();
-			this.txtMailAddress = new System.Windows.Forms.TextBox();
-			this.groupBox1.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.txtMailAddress);
-			this.groupBox1.Controls.Add(this.btnSendMail);
-			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Location = new System.Drawing.Point(46, 57);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(241, 107);
-			this.groupBox1.TabIndex = 0;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Forget My Password";
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(7, 31);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(45, 13);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "E-Mail : ";
-			// 
-			// btnSendMail
-			// 
-			this.btnSendMail.Location = new System.Drawing.Point(81, 54);
-			this.btnSendMail.Name = "btnSendMail";
-			this.btnSendMail.Size = new System.Drawing.Size(122, 33);
-			this.btnSendMail.TabIndex = 1;
-			this.btnSendMail.Text = "Send Mail";
-			this.btnSendMail.UseVisualStyleBackColor = true;
-			this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
-			// 
-			// txtMailAddress
-			// 
-			this.txtMailAddress.Location = new System.Drawing.Point(58, 28);
-			this.txtMailAddress.Name = "txtMailAddress";
-			this.txtMailAddress.Size = new System.Drawing.Size(177, 20);
-			this.txtMailAddress.TabIndex = 2;
-			// 
-			// ForgetPasswordForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(335, 225);
-			this.Controls.Add(this.groupBox1);
-			this.Name = "ForgetPasswordForm";
-			this.Text = "ForgetPasswordForm";
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgetPasswordForm));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtMailAddress = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnSendMail = new Bunifu.Framework.UI.BunifuThinButton2();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(603, 398);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtMailAddress
+            // 
+            this.txtMailAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMailAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtMailAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMailAddress.HintForeColor = System.Drawing.Color.Empty;
+            this.txtMailAddress.HintText = "E-Mail";
+            this.txtMailAddress.isPassword = false;
+            this.txtMailAddress.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtMailAddress.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtMailAddress.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtMailAddress.LineThickness = 3;
+            this.txtMailAddress.Location = new System.Drawing.Point(13, 71);
+            this.txtMailAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMailAddress.Name = "txtMailAddress";
+            this.txtMailAddress.Size = new System.Drawing.Size(370, 44);
+            this.txtMailAddress.TabIndex = 2;
+            this.txtMailAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnSendMail
+            // 
+            this.btnSendMail.ActiveBorderThickness = 1;
+            this.btnSendMail.ActiveCornerRadius = 20;
+            this.btnSendMail.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnSendMail.ActiveForecolor = System.Drawing.Color.White;
+            this.btnSendMail.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSendMail.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSendMail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSendMail.BackgroundImage")));
+            this.btnSendMail.ButtonText = "Send Mail";
+            this.btnSendMail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendMail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendMail.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnSendMail.IdleBorderThickness = 1;
+            this.btnSendMail.IdleCornerRadius = 20;
+            this.btnSendMail.IdleFillColor = System.Drawing.Color.White;
+            this.btnSendMail.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnSendMail.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSendMail.Location = new System.Drawing.Point(99, 137);
+            this.btnSendMail.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSendMail.Name = "btnSendMail";
+            this.btnSendMail.Size = new System.Drawing.Size(181, 41);
+            this.btnSendMail.TabIndex = 3;
+            this.btnSendMail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
+            // 
+            // ForgetPasswordForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(529, 316);
+            this.Controls.Add(this.btnSendMail);
+            this.Controls.Add(this.txtMailAddress);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "ForgetPasswordForm";
+            this.Text = "ForgetPasswordForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
 
 		}
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.TextBox txtMailAddress;
-		private System.Windows.Forms.Button btnSendMail;
-		private System.Windows.Forms.Label label1;
-	}
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMailAddress;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnSendMail;
+    }
 }
